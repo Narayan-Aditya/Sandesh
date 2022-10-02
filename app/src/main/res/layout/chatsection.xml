@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp">
+    <ImageView
+        android:id="@+id/ChatUserDp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/applogo"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ChatUserDp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/ChatUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecentChats"
+            android:textColor="@color/primary"/>
+    </LinearLayout>
+
+</RelativeLayout>

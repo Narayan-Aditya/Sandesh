@@ -31,7 +31,7 @@ class signup : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
     //For Storage
         storage = FirebaseStorage.getInstance()
-    //Function for Uploading Img**//
+//Function for Uploading Img**//
         uploadImg()
 
 
@@ -42,11 +42,13 @@ class signup : AppCompatActivity() {
             val email = InputEmail.text.toString()
             val password = InputPassword.text.toString()
             val repassword = InputConfirmPassword.text.toString()
-            if(name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && repassword.isNotEmpty()){
+            if(selectedImg != null && name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && repassword.isNotEmpty()){
+
                 if(password == repassword){
 
                     auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
                         if(it.isSuccessful){
+
                             startActivity(Intent(this@signup,MainActivity::class.java))
                             finish()
                         }else{
@@ -76,7 +78,7 @@ class signup : AppCompatActivity() {
     }
 
     private fun uploadInfo(UserData: String){
-        val user = UserDataModel(Name.text.toString(),InputEmail.text.toString(),InputPassword.text.toString())
+        val user = UserDataModel(auth.uid.toString(),Name.text.toString(),InputEmail.text.toString(),InputPassword.text.toString())
         database.reference.child("User")
             .child(Name.text.toString())
             .setValue(user)

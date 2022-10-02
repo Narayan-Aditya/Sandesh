@@ -2,4 +2,6 @@
 <resources>
     <color name="white_lite">#B5EBDB</color>
     <color name="lite_blue">#4055DD</color>
+    <color name="black">#000000</color>
+    <color name="chat_backgroung">#363D3C</color>
 </resources>
