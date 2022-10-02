@@ -37,3 +37,5 @@ class ChatAdaptor(var context : Context, var list : ArrayList<UserDataModel>): R
         return list.size
     }
 }
+
+

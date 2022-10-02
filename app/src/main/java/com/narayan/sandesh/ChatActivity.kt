@@ -56,7 +56,9 @@ class ChatActivity : AppCompatActivity() {
                     list.clear()
                     for (snapshot1 in snapshot.children){
                         val data = snapshot1.getValue(MassageModel::class.java)
-                            list.add(data!!)
+                        if (data != null) {
+                            list.add(data)
+                        }
                     }
                     chatRecyclerview.adapter = MessageAdaptor(this@ChatActivity,list)
 

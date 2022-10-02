@@ -44,6 +44,7 @@ class signin : AppCompatActivity() {
         super.onStart()
         if(auth.currentUser != null){
             startActivity(Intent(this@signin,MainActivity::class.java))
+            finish()
         }
     }
 }
