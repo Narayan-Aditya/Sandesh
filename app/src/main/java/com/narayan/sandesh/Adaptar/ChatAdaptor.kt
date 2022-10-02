@@ -10,7 +10,6 @@ import com.narayan.sandesh.ChatActivity
 import com.narayan.sandesh.R
 import com.narayan.sandesh.UserDataModel
 import com.narayan.sandesh.databinding.ChatsectionBinding
-import kotlinx.android.synthetic.main.activity_signup.view.*
 
 class ChatAdaptor(var context : Context, var list : ArrayList<UserDataModel>): RecyclerView.Adapter<ChatAdaptor.ChatViewHolder>() {
 

@@ -1,6 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.Sandesh" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/white_lite</item>
+        <item name="colorButtonNormal">@color/input_background</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
     </style>
 </resources>

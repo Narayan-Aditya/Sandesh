@@ -50,15 +50,13 @@ class ChatActivity : AppCompatActivity() {
             }
         }
 
-        database.reference.child("chats").child("message")
+        database.reference.child("chats").child(senderRoom).child("message")
             .addValueEventListener(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     list.clear()
                     for (snapshot1 in snapshot.children){
                         val data = snapshot1.getValue(MassageModel::class.java)
-                        if (data != null) {
-                            list.add(data)
-                        }
+                        list.add(data!!)
                     }
                     chatRecyclerview.adapter = MessageAdaptor(this@ChatActivity,list)
 

@@ -41,7 +41,8 @@
                android:text="@string/sign_out"
                android:textStyle="italic"
                android:textSize="@dimen/_16sdp"
-               android:id="@+id/signOut"/>
+               android:id="@+id/signOut"
+               android:textColor="@color/red"/>
        </androidx.constraintlayout.widget.ConstraintLayout>
        <com.google.android.material.tabs.TabLayout
            android:layout_width="match_parent"

@@ -7,6 +7,22 @@
     tools:context=".ChatActivity"
     android:background="@color/chat_backgroung">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:textSize="@dimen/_35sdp"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_10sdp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerview"
         android:layout_width="match_parent"
@@ -16,7 +32,7 @@
         app:layout_constraintBottom_toTopOf="@+id/materialCardView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/appBar"/>
 
     <ImageButton
         android:id="@+id/chatSendButton"
